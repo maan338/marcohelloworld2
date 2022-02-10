@@ -4,6 +4,7 @@ env:
   variables:
     GIT_USER: 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
     GIT_PASSWORD: maan338
+    sshkey: 
   git-credential-helper: yes
 
 phases:
@@ -12,20 +13,23 @@ phases:
       python: 3.7
   pre_build:
     commands:
-      #- git config --global --replace-all user.name "maan338"
-      #- git config --global --replace-all user.email "maanisim@amazon.com"
-      - git config --global --unset credential.helper
       - git config --global credential.helper store
       - echo "https://$GIT_USER:$GIT_PASSWORD@github.com " > ~/.git-credentials
-      - cat /root/.gitconfig
-      - git init
-      - echo hi > hi.mom
-      - git add .
-      - git commit -am "hi mom"
-      - git branch -M master
-      - git remote add origin https://github.com/maan338/pushere.git
+	    - cat /root/.gitconfig
+      - git clone https://github.com/maan338/marcohelloworld2.git 
+      
+      #- git config --global --unset credential.helper
+      #- git config --global credential.helper store
+      #- echo "https://$GIT_USER:$GIT_PASSWORD@github.com " > ~/.git-credentials
+      #- cat /root/.gitconfig
+      #- git init
+      #- echo hi > hi.mom
+      #- git add .
+      #- git commit -am "hi mom"
+      #- git branch -M master
+      #- git remote add origin https://github.com/maan338/pushere.git
       #- git remote add origin "https://{$MY_GIT_USER}:{$MY_GIT_TOKEN}@github.com/{$MY_GIT_USER}/project.git"
-      - git push -u origin master
+      #- git push -u origin master
       - python setup.py pytest
       # Do not remove this statement. This command is required for AWS CodeStar projects.
       # Update the AWS Partition, AWS Region, account ID and project ID in the project ARN in template-configuration.json file so AWS CloudFormation can tag project resources.
