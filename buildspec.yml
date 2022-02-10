@@ -4,7 +4,6 @@ env:
   variables:
     GIT_USER: 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
     GIT_PASSWORD: maan338
-    sshkey: 
   git-credential-helper: yes
 
 phases:
