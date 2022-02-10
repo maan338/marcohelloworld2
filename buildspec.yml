@@ -21,6 +21,8 @@ phases:
       - echo "sample" > sample.sample
       - git init
       - git add .
+      - git config --global user.email "maanisim@amazon.com"
+      - git config --global user.name "maan338"
       - git commit -am "sample sample"
       - git branch -M master
       - git remote add origin https://github.com/maan338/test1.git
