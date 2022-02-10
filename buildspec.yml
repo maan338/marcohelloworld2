@@ -4,6 +4,7 @@ env:
   variables:
     GIT_PASSWORD: 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
     GIT_USER: maan338
+    GIT_EMAIL: maanisim@amazon.com
   git-credential-helper: yes
 
 phases:
@@ -21,6 +22,7 @@ phases:
       - echo "sample" > sample.sample
       - git init
       - git config --global user.name "{$GIT_USER}"
+      - git config --global user.email "${GIT_EMAIL}"
       - git config pull.rebase true
       #- git remote add origin https://github.com/XXXX/YYYY.git
       - git remote add origin https://github.com/maan338/test1.git
