@@ -21,13 +21,15 @@ phases:
       #- git clone https://github.com/XXXXX/YYYY.git
       - echo "sample" > sample.sample
       - git init
-      - git add .
       - git config --global user.email "${GIT_EMAIL}"
       - git config --global user.name "{$GIT_USER}"
-      - git commit -am "sample2 sample"
-      - git branch -M master
       #- git remote add origin https://github.com/XXXX/YYYY.git
       - git remote add origin https://github.com/maan338/test1.git
+      - git pull
+      - echo ${RANDOM:0:9} > rand.txt
+      - git add .
+      - git commit -am "rand new"
+      - git branch -M master
       - git push --set-upstream origin master
 
       #- git config --global --unset credential.helper
