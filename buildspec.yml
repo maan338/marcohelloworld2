@@ -20,7 +20,7 @@ phases:
       #- git clone https://github.com/XXXXX/YYYY.git
       - echo "sample" > sample.sample
       - git init
-      #- git config --global user.name "{$GIT_USER}"
+      - git config --global user.name "{$GIT_USER}"
       - git config pull.rebase true
       #- git remote add origin https://github.com/XXXX/YYYY.git
       - git remote add origin https://github.com/maan338/test1.git
