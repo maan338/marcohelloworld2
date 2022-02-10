@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   variables:
-    GIT_USER: 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
-    GIT_PASSWORD: maan338
+    GIT_PASSWORD: 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
+    GIT_USER: maan338
     test: a
   git-credential-helper: yes
 
