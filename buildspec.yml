@@ -23,6 +23,7 @@ phases:
       - git init
       - git config --global user.email "${GIT_EMAIL}"
       - git config --global user.name "{$GIT_USER}"
+      - git config pull.rebase false
       #- git remote add origin https://github.com/XXXX/YYYY.git
       - git remote add origin https://github.com/maan338/test1.git
       - git pull
