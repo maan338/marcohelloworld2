@@ -4,7 +4,6 @@ env:
   variables:
     GIT_PASSWORD: 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
     GIT_USER: maan338
-    test: a
   git-credential-helper: yes
 
 phases:
@@ -21,8 +20,7 @@ phases:
       #- git clone https://github.com/XXXXX/YYYY.git
       - echo "sample" > sample.sample
       - git init
-      - git config --global user.email "${GIT_EMAIL}"
-      - git config --global user.name "{$GIT_USER}"
+      #- git config --global user.name "{$GIT_USER}"
       - git config pull.rebase true
       #- git remote add origin https://github.com/XXXX/YYYY.git
       - git remote add origin https://github.com/maan338/test1.git
@@ -34,18 +32,6 @@ phases:
       - git branch -M master
       - git push --set-upstream origin master
 
-      #- git config --global --unset credential.helper
-      #- git config --global credential.helper store
-      #- echo "https://$GIT_USER:$GIT_PASSWORD@github.com " > ~/.git-credentials
-      #- cat /root/.gitconfig
-      #- git init
-      #- echo hi > hi.mom
-      #- git add .
-      #- git commit -am "hi mom"
-      #- git branch -M master
-      #- git remote add origin https://github.com/maan338/pushere.git
-      #- git remote add origin "https://{$MY_GIT_USER}:{$MY_GIT_TOKEN}@github.com/{$MY_GIT_USER}/project.git"
-      #- git push -u origin master
       - python setup.py pytest
       # Do not remove this statement. This command is required for AWS CodeStar projects.
       # Update the AWS Partition, AWS Region, account ID and project ID in the project ARN in template-configuration.json file so AWS CloudFormation can tag project resources.
