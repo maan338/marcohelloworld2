@@ -26,6 +26,8 @@ phases:
       - git config pull.rebase true
       #- git remote add origin https://github.com/XXXX/YYYY.git
       - git remote add origin https://github.com/maan338/test1.git
+      - git add * 
+      - git stash
       - git pull origin master
       - echo ${RANDOM:0:9} > rand.txt
       - git add .
