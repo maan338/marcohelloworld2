@@ -14,7 +14,7 @@ phases:
   pre_build:
     commands:
       - git config -l
-      - git config --global credential.helper store
+      - git config --global credential.helper store --replace-all
       - echo "https://$GIT_USER:$GIT_PASSWORD@github.com " > ~/.git-credentials
       - cat /root/.gitconfig
       - git clone https://github.com/maan338/marcohelloworld2.git 
