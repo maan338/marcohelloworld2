@@ -15,7 +15,7 @@ phases:
     commands:
       - git config --global credential.helper store
       - echo "https://$GIT_USER:$GIT_PASSWORD@github.com " > ~/.git-credentials
-	    - cat /root/.gitconfig
+      - cat /root/.gitconfig
       - git clone https://github.com/maan338/marcohelloworld2.git 
       
       #- git config --global --unset credential.helper
