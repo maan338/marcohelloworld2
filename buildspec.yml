@@ -18,15 +18,18 @@ phases:
       - echo "https://$GIT_USER:$GIT_PASSWORD@github.com " > ~/.git-credentials
       - cat /root/.gitconfig
       #- git clone https://github.com/maan338/nuget-package-sample.git
+      #- git clone https://github.com/XXXXX/YYYY.git
       - echo "sample" > sample.sample
       - git init
       - git add .
-      - git config --global user.email "maanisim@amazon.com"
-      - git config --global user.name "maan338"
+      - git config --global user.email "${GIT_EMAIL}"
+      - git config --global user.name "{$GIT_USER}"
       - git commit -am "sample sample"
       - git branch -M master
+      #- git remote add origin https://github.com/XXXX/YYYY.git
       - git remote add origin https://github.com/maan338/test1.git
       - git push --set-upstream origin master
+
       #- git config --global --unset credential.helper
       #- git config --global credential.helper store
       #- echo "https://$GIT_USER:$GIT_PASSWORD@github.com " > ~/.git-credentials
